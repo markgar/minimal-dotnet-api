@@ -26,10 +26,15 @@ This software is written with assistance from GitHub Copilot. The code is struct
 
 ## Project structure
 
-This is a single-project .NET 10 minimal API. All application code lives at the repository root — there are no subdirectories for layers, services, or modules. The `.csproj` project file and `Program.cs` entry point sit alongside configuration files at the top level.
+This is a .NET 10 minimal API with an xUnit test project. The solution consists of two subdirectories:
+- `Api/` — the main web API project (`Api.csproj`, `Program.cs`, and config files)
+- `Api.Tests/` — the xUnit test project (`Api.Tests.csproj`) with a project reference to `Api`
 
 ## Key files
 
+- `Api/Program.cs` — entry point; all route registrations live here
+- `Api/Api.csproj` — project file targeting net10.0
+- `Api.Tests/Api.Tests.csproj` — test project targeting net10.0
 - `SPEC.md` — technical specification and acceptance criteria
 - `REQUIREMENTS.md` — original project requirements
 - `BACKLOG.md` — prioritised work backlog
