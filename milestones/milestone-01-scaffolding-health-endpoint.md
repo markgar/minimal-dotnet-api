@@ -8,4 +8,4 @@
 - [x] Register `GET /health` in `Program.cs` that returns HTTP 200 with JSON body `{ "status": "healthy" }` using `Results.Ok(new { status = "healthy" })`
 - [x] Add an xUnit test project using `dotnet new xunit -n Api.Tests --framework net10.0` alongside the main project
 - [x] Add a project reference from `Api.Tests` to `Api` using `dotnet add Api.Tests/Api.Tests.csproj reference Api/Api.csproj`
-- [ ] Write one placeholder test in `Api.Tests` named `PlaceholderTest` with a single fact `ApplicationStarts_PlaceholderPasses` that asserts `Assert.True(true)`
+- [x] Write one placeholder test in `Api.Tests` named `PlaceholderTest` with a single fact `ApplicationStarts_PlaceholderPasses` that asserts `Assert.True(true)`
