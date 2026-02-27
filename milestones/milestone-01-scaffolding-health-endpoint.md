@@ -7,5 +7,5 @@
 - [x] Create a .NET 10 minimal API project at the repository root using `dotnet new web -n Api --framework net10.0` and confirm the generated `.csproj` targets `net10.0`
 - [x] Register `GET /health` in `Program.cs` that returns HTTP 200 with JSON body `{ "status": "healthy" }` using `Results.Ok(new { status = "healthy" })`
 - [x] Add an xUnit test project using `dotnet new xunit -n Api.Tests --framework net10.0` alongside the main project
-- [ ] Add a project reference from `Api.Tests` to `Api` using `dotnet add Api.Tests/Api.Tests.csproj reference Api/Api.csproj`
+- [x] Add a project reference from `Api.Tests` to `Api` using `dotnet add Api.Tests/Api.Tests.csproj reference Api/Api.csproj`
 - [ ] Write one placeholder test in `Api.Tests` named `PlaceholderTest` with a single fact `ApplicationStarts_PlaceholderPasses` that asserts `Assert.True(true)`
