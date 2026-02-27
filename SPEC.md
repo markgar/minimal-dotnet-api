@@ -14,7 +14,7 @@ A lightweight .NET 10 minimal API exposing a single health-check endpoint. The g
 
 ## Architecture
 
-- Single-project structure — no layers, no separate class library
+- Two-project structure: `Api/` (main web API) and `Api.Tests/` (xUnit test project)
 - All route handlers registered directly in `Program.cs`
 - No controllers, no MVC pipeline
 - Dependency injection used only for built-in ASP.NET Core services
@@ -23,10 +23,14 @@ A lightweight .NET 10 minimal API exposing a single health-check endpoint. The g
 
 ```
 /
-├── Program.cs          # Entry point; all route registrations
-├── *.csproj            # Project file targeting net10.0
-├── appsettings.json    # Default ASP.NET Core config (kept minimal)
-└── appsettings.Development.json
+├── Api/
+│   ├── Program.cs          # Entry point; all route registrations
+│   ├── Api.csproj          # Project file targeting net10.0
+│   ├── appsettings.json    # Default ASP.NET Core config (kept minimal)
+│   └── appsettings.Development.json
+└── Api.Tests/
+    ├── Api.Tests.csproj    # xUnit test project
+    └── PlaceholderTest.cs
 ```
 
 ## Cross-Cutting Concerns
